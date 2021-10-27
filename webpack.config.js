@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     devtool: "source-map",
     mode: 'development',
-    entry: './src/index.js',
+    entry: './src/index.ts',
     devServer: {
         historyApiFallback: true,
         open: true,
@@ -15,17 +15,20 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
-        // publicPath: "/build/" // ???
+        publicPath: "/build/" // ???
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
     },
     module: {
         rules: [
             {
-                test: /\.js/,
+                test: /\.(ts|js)?$/,
                 exclude: /node_modules/, //https://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env', "@babel/preset-typescript"],
                     }
                 }
             }

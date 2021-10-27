@@ -1,32 +1,104 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/CamList.ts":
+/*!************************!*\
+  !*** ./src/CamList.ts ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/test.js\");\n\n(0,_test__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(\"DZHOPA\");\n\n//# sourceURL=webpack://test05/./src/index.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/***/ }),
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-/***/ "./src/test.js":
-/*!*********************!*\
-  !*** ./src/test.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction test() {\n  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : \"noname\";\n  console.log(name);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (test);\n\n//# sourceURL=webpack://test05/./src/test.js?");
+var CamList = /*#__PURE__*/function () {
+  function CamList() {
+    _classCallCheck(this, CamList);
+  }
+
+  _createClass(CamList, [{
+    key: "camEventList",
+    get: //"192.168.5.102"
+    //60,
+    //100,
+    //20
+    //0.45,
+    //0.35
+    function get() {
+      return this._camEventList;
+    },
+    set: function set(value) {
+      this._camEventList = value;
+    }
+  }, {
+    key: "serverIp",
+    get: function get() {
+      return this._serverIp;
+    },
+    set: function set(value) {
+      this._serverIp = value;
+    }
+  }, {
+    key: "movdetColorTresh",
+    get: function get() {
+      return this._movdetColorTresh;
+    },
+    set: function set(value) {
+      this._movdetColorTresh = value;
+    }
+  }, {
+    key: "movdetDiffTresh",
+    get: function get() {
+      return this._movdetDiffTresh;
+    },
+    set: function set(value) {
+      this._movdetDiffTresh = value;
+    }
+  }, {
+    key: "movdetTimerPeriod",
+    get: function get() {
+      return this._movdetTimerPeriod;
+    },
+    set: function set(value) {
+      this._movdetTimerPeriod = value;
+    }
+  }, {
+    key: "confThresh",
+    get: function get() {
+      return this._confThresh;
+    },
+    set: function set(value) {
+      this._confThresh = value;
+    }
+  }, {
+    key: "nmsThresh",
+    get: function get() {
+      return this._nmsThresh;
+    },
+    set: function set(value) {
+      this._nmsThresh = value;
+    }
+  }, {
+    key: "camList",
+    get: function get() {
+      return this._camList;
+    },
+    set: function set(value) {
+      this._camList = value;
+    }
+  }]);
+
+  return CamList;
+}();
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CamList);
 
 /***/ })
 
@@ -86,11 +158,20 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CamList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CamList */ "./src/CamList.ts");
+
+var camList = new _CamList__WEBPACK_IMPORTED_MODULE_0__["default"]();
+camList.serverIp = "192.168.5.102";
+console.log("Server IP: " + camList.serverIp);
+})();
+
 /******/ })()
 ;
+//# sourceMappingURL=bundle.js.map
