@@ -12,6 +12,15 @@ class CamList {
     private _camList: Cam[];
     private _camEventList: CamEvent[];
 
+    constructor(value: any) {
+        this._serverIp = value.serverIp;
+        this._camList = value.camList;
+    }
+
+    static readFromJSON(value: string): JSON {
+        return JSON.parse(value);
+    }
+
     get camEventList(): CamEvent[] {
         return this._camEventList;
     }
